@@ -4,9 +4,10 @@ layout: page
 ---
 
 <div id="results-container"></div>
-  <script>
-const github_user = 'xchopath';
-const github_repo = 'www.novr.one';
+
+<script>
+const github_user = '{{ site.author.github }}';
+const github_repo = '{{ site.author.gh_page_repo }}';
 const url = 'https://api.github.com/repos/' + github_user + '/' + github_repo + '/contents' + window.location.pathname;
 
 let contentsHtml = '';
@@ -29,4 +30,4 @@ fetch(url)
   .catch(error => {
     console.error(error);
   });
-  </script>
+</script>
